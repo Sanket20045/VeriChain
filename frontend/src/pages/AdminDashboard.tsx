@@ -190,8 +190,8 @@ export default function AdminDashboard() {
         {/* Charts Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {/* Main Trend Chart */}
-          <div className="lg:col-span-2 p-6 rounded-2xl bg-[#0e131f]/90 backdrop-blur-md border border-white/[0.08] shadow-lg shadow-black/40">
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-6 pb-4 border-b border-white/[0.04]">
+          <div className="lg:col-span-2 p-6 rounded-2xl bg-[#0e131f]/90 backdrop-blur-md border border-white/[0.08] shadow-lg shadow-black/40 overflow-hidden flex flex-col justify-between">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4 pb-4 border-b border-white/[0.04]">
               <div>
                 <h3 className="text-base font-bold text-white">
                   Verification Velocity & AI Sentinel
@@ -212,8 +212,8 @@ export default function AdminDashboard() {
               </div>
             </div>
 
-            <div className="h-64 w-full">
-              <ResponsiveContainer width="100%" height="100%">
+            <div className="w-full my-1" style={{ height: 240, minHeight: 240 }}>
+              <ResponsiveContainer width="100%" height={240}>
                 <AreaChart data={verificationTrendData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
                   <defs>
                     <linearGradient id="colorVerif" x1="0" y1="0" x2="0" y2="1">
@@ -247,18 +247,18 @@ export default function AdminDashboard() {
           </div>
 
           {/* Department Breakdown Bar Chart */}
-          <div className="p-6 rounded-2xl bg-[#0e131f]/90 backdrop-blur-md border border-white/[0.08] shadow-lg shadow-black/40 flex flex-col justify-between">
+          <div className="p-6 rounded-2xl bg-[#0e131f]/90 backdrop-blur-md border border-white/[0.08] shadow-lg shadow-black/40 flex flex-col justify-between overflow-hidden">
             <div>
               <h3 className="text-base font-bold text-white">
                 Issuance by Discipline
               </h3>
-              <p className="text-xs text-slate-400 mt-0.5 mb-4">
+              <p className="text-xs text-slate-400 mt-0.5 mb-2">
                 Anchored credentials across academic departments
               </p>
             </div>
 
-            <div className="h-56 w-full">
-              <ResponsiveContainer width="100%" height="100%">
+            <div className="w-full my-1" style={{ height: 210, minHeight: 210 }}>
+              <ResponsiveContainer width="100%" height={210}>
                 <BarChart data={deptData} margin={{ top: 10, right: 10, left: -25, bottom: 0 }}>
                   <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.04)" />
                   <XAxis dataKey="dept" stroke="#64748b" fontSize={11} tickLine={false} />
@@ -289,7 +289,7 @@ export default function AdminDashboard() {
         {/* Split Tables: Recent Certificates & Live Audit Feed */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {/* Recent Credentials */}
-          <div className="p-6 rounded-2xl bg-[#0e131f]/90 backdrop-blur-md border border-white/[0.08] shadow-lg shadow-black/40 flex flex-col justify-between">
+          <div className="p-6 rounded-2xl bg-[#0e131f]/90 backdrop-blur-md border border-white/[0.08] shadow-lg shadow-black/40 overflow-hidden flex flex-col justify-between">
             <div>
               <div className="flex items-center justify-between mb-5 pb-3 border-b border-white/[0.04]">
                 <h3 className="text-base font-bold text-white">
@@ -360,7 +360,7 @@ export default function AdminDashboard() {
           </div>
 
           {/* Live Verifications Stream */}
-          <div className="p-6 rounded-2xl bg-[#0e131f]/90 backdrop-blur-md border border-white/[0.08] shadow-lg shadow-black/40 flex flex-col justify-between">
+          <div className="p-6 rounded-2xl bg-[#0e131f]/90 backdrop-blur-md border border-white/[0.08] shadow-lg shadow-black/40 overflow-hidden flex flex-col justify-between">
             <div>
               <div className="flex items-center justify-between mb-5 pb-3 border-b border-white/[0.04]">
                 <h3 className="text-base font-bold text-white">

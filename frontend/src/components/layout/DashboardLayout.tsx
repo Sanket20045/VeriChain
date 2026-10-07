@@ -144,7 +144,7 @@ export default function DashboardLayout({
   }
 
   return (
-    <div className="min-h-screen bg-[#07090D] text-slate-100 flex relative selection:bg-violet-500/30 selection:text-white">
+    <div className="min-h-screen bg-[#07090D] text-slate-100 flex flex-col lg:flex-row relative selection:bg-violet-500/30 selection:text-white">
       {/* Ambient background lighting */}
       <div className="fixed inset-0 pointer-events-none bg-[radial-gradient(ellipse_70%_50%_at_50%_-15%,rgba(124,58,237,0.12),transparent_70%)] z-0" />
       <div className="fixed inset-0 pointer-events-none bg-[radial-gradient(ellipse_40%_40%_at_100%_100%,rgba(6,182,212,0.06),transparent_70%)] z-0" />
@@ -159,9 +159,10 @@ export default function DashboardLayout({
 
       {/* Sidebar */}
       <aside
-        className={`fixed top-0 bottom-0 left-0 w-64 bg-[#090D15]/95 backdrop-blur-xl border-r border-white/[0.08] flex flex-col z-50 transition-transform duration-300 ease-out ${
-          sidebarOpen ? 'translate-x-0 shadow-2xl shadow-black/80' : '-translate-x-full lg:translate-x-0'
+        className={`fixed inset-y-0 left-0 z-50 w-64 bg-[#090D15]/95 backdrop-blur-xl border-r border-white/[0.08] flex flex-col transition-transform duration-300 ease-out lg:static lg:translate-x-0 lg:h-screen lg:sticky lg:top-0 lg:z-30 lg:shrink-0 ${
+          sidebarOpen ? 'translate-x-0 shadow-2xl shadow-black/80' : '-translate-x-full'
         }`}
+        style={{ width: '256px', minWidth: '256px' }}
       >
         {/* Logo & Brand Header */}
         <div className="p-5 border-b border-white/[0.08] flex items-center justify-between">
@@ -248,7 +249,10 @@ export default function DashboardLayout({
       </aside>
 
       {/* Main Content Area */}
-      <main className="flex-1 min-h-screen lg:ml-64 relative z-10 flex flex-col">
+      <main
+        className="flex-1 min-w-0 flex flex-col relative z-10 w-full"
+        style={{ minWidth: 0, flex: 1 }}
+      >
         {/* Mobile top navigation bar */}
         <div className="lg:hidden flex items-center justify-between px-5 py-4 border-b border-white/[0.08] bg-[#090D15]/80 backdrop-blur-md sticky top-0 z-30">
           <button
@@ -267,7 +271,7 @@ export default function DashboardLayout({
         </div>
 
         {/* Dashboard Child View */}
-        <div className="flex-1 p-5 md:p-8 lg:p-10">
+        <div className="flex-1 p-4 sm:p-6 lg:p-8 xl:p-10 w-full max-w-[1500px] mx-auto">
           {children}
         </div>
       </main>
