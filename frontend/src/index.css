@@ -6,24 +6,34 @@
   /* Backgrounds */
   --vc-bg-base:       #07090D;
   --vc-bg-elevated:   #0B0E13;
-  --vc-surface-1:     #10141B;
-  --vc-surface-2:     #141922;
-  --vc-surface-3:     #181D26;
+  /* Surfaces */
+  --vc-surface:       #0D111A;
+  --vc-surface-raised: #121824;
+  --vc-surface-card:   #101520;
+  --vc-surface-subtle: #090D14;
+  --vc-surface-hover:  #182030;
+  --vc-surface-1:     #0E131D;
+  --vc-surface-2:     #131926;
+  --vc-surface-3:     #182030;
 
-  /* Borders */
-  --vc-border:        rgba(255,255,255,0.07);
-  --vc-border-accent: rgba(139,92,246,0.25);
-  --vc-border-glow:   rgba(139,92,246,0.45);
+  /* Borders — soft, atmospheric, never harsh white */
+  --vc-border:        rgba(255,255,255,0.08);
+  --vc-border-subtle: rgba(255,255,255,0.08);
+  --vc-border-strong: rgba(255,255,255,0.15);
+  --vc-border-accent: rgba(139,92,246,0.30);
+  --vc-border-glow:   rgba(139,92,246,0.50);
 
   /* Primary accent — Electric Violet / Indigo */
   --vc-accent:        #7C3AED;
   --vc-accent-light:  #8B5CF6;
   --vc-accent-dim:    rgba(124,58,237,0.12);
-  --vc-accent-glow:   rgba(124,58,237,0.20);
+  --vc-accent-muted:  rgba(124,58,237,0.14);
+  --vc-accent-glow:   rgba(124,58,237,0.22);
 
   /* Secondary accent — Controlled Cyan */
   --vc-cyan:          #06B6D4;
   --vc-cyan-dim:      rgba(6,182,212,0.10);
+  --vc-cyan-muted:    rgba(6,182,212,0.12);
 
   /* Text */
   --vc-text-primary:   #F1F5F9;
@@ -34,21 +44,25 @@
   /* Semantic — VALID */
   --vc-valid:         #10B981;
   --vc-valid-dim:     rgba(16,185,129,0.12);
+  --vc-valid-muted:   rgba(16,185,129,0.14);
   --vc-valid-border:  rgba(16,185,129,0.30);
 
   /* Semantic — SUSPICIOUS */
   --vc-suspicious:    #F59E0B;
   --vc-suspicious-dim: rgba(245,158,11,0.12);
+  --vc-suspicious-muted: rgba(245,158,11,0.14);
   --vc-suspicious-border: rgba(245,158,11,0.30);
 
   /* Semantic — INVALID */
   --vc-invalid:       #EF4444;
   --vc-invalid-dim:   rgba(239,68,68,0.12);
+  --vc-invalid-muted: rgba(239,68,68,0.14);
   --vc-invalid-border: rgba(239,68,68,0.30);
 
   /* Semantic — REVOKED */
   --vc-revoked:       #F97316;
   --vc-revoked-dim:   rgba(249,115,22,0.12);
+  --vc-revoked-muted: rgba(249,115,22,0.14);
   --vc-revoked-border: rgba(249,115,22,0.30);
 
   /* Semantic — INFO */
