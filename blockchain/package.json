@@ -1,0 +1,18 @@
+{
+  "name": "verichain-blockchain",
+  "version": "1.0.0",
+  "description": "VeriChain Smart Contracts — CertificateRegistry",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "node": "hardhat node",
+    "deploy:local": "hardhat ignition deploy ./ignition/modules/CertificateRegistry.ts --network localhost"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@openzeppelin/contracts": "^5.6.1",
+    "hardhat": "^2.29.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  }
+}
